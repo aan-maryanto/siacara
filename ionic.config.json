@@ -1,0 +1,8 @@
+{
+  "name": "siacara",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "7c86efed"
+}
