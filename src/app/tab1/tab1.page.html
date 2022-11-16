@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of EVENTS;">
+      <ion-card>
+        <img src="{{item.image}}" alt="event" />
+        <ion-card-header>
+          <ion-card-title>{{item.name}}</ion-card-title>
+          <ion-card-subtitle>{{ item.location }} , {{item.date}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloribus, dolores consequatur iure id, ipsam temporibus repellendus maxime voluptatum ducimus quod fugiat ab hic earum vitae minus reiciendis omnis ratione?</ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>
